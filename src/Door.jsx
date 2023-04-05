@@ -9,7 +9,7 @@ export default function Door() {
         normalMap: PATH + 'normal.jpg',
         roughnessMap: PATH + 'roughnes.jpg',
         aoMap: PATH + 'aO.jpg',
-        metalnessMap: PATH + 'metallic.jpg'
+        alphaMap: PATH + 'metallic.jpg'
     })
     return (
         <mesh rotation-y={Math.PI / 12} castShadow={true}>

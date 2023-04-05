@@ -1,11 +1,10 @@
 import { DoubleSide } from "three";
-import {useTexture} from "@react-three/drei";
+import { useTexture } from "@react-three/drei";
 
 export default function Sphere() {
     const PATH = "/static/textures/ball/"
     const props = useTexture({
-        map:PATH+"color.jpg",
-        displacementMap: PATH + 'height.png',
+        map: PATH + "color.jpg",
         normalMap: PATH + 'normal.jpg',
         roughnessMap: PATH + 'roughness.jpg',
         aoMap: PATH + 'aO.jpg',
@@ -13,11 +12,11 @@ export default function Sphere() {
     })
     return (
 
-        
-<mesh position={[1,3,2]}>
-<sphereGeometry args={[2, 90, 60]} />
-<meshStandardMaterial {...props}/>
-</mesh>
+
+        <mesh position={[1, 2, 2]} castShadow={true}>
+            <sphereGeometry args={[2, 90, 60]} />
+            <meshStandardMaterial {...props} />
+        </mesh>
 
     )
 }
